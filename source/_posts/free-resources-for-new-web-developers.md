@@ -9,3 +9,5 @@ tags:
 * [MDN](https://developer.mozilla.org/)
 * [Eloquent JavaScript Book](http://eloquentjavascript.net/)
 * [JS Mailing List](http://javascriptweekly.com/)
+* [Umaar's Dev Tips](https://umaar.com/dev-tips/)
+* [Codecademy]( https://www.codecademy.com) 
