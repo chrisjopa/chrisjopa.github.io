@@ -5,14 +5,14 @@
 # Site
 title: Chris Jopa
 subtitle: Web Development Blog
-description:
+description: "Chris Jopa's Web Development Blog about HTML, CSS, and JavaScript."
 author: Chris Jopa
 language: en
 timezone: America/Chicago
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://chrisjopa.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
