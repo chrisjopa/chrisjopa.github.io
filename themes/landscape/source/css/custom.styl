@@ -4,3 +4,25 @@
 #banner
   background: none
   background-color: #262a30
+
+// custom grid
+
+.custom-row
+  margin-right: -15px
+  margin-left: -15px
+
+div[class*="custom-col-"]
+  box-sizing: border-box
+  float: left
+  padding-right: 15px
+  padding-left: 15px
+
+.custom-col-3
+  width: 25%
+
+.custom-col-9
+  width: 75%
+
+@media (max-width: 750px)
+  div[class*="custom-col-"]
+    width: 100%;
