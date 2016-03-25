@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Learning Git | Chris Jopa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Git is the standard Version Control System for software developers. Version control systems like Git enable developers to reliably collaborate with one another. Git also saves a snapshot of every vers">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Learning Git">
+<meta property="og:url" content="http://chrisjopa.com/2016/03/24/learning-git/index.html">
+<meta property="og:site_name" content="Chris Jopa">
+<meta property="og:description" content="Git is the standard Version Control System for software developers. Version control systems like Git enable developers to reliably collaborate with one another. Git also saves a snapshot of every vers">
+<meta property="og:updated_time" content="2016-03-25T02:47:31.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Learning Git">
+<meta name="twitter:description" content="Git is the standard Version Control System for software developers. Version control systems like Git enable developers to reliably collaborate with one another. Git also saves a snapshot of every vers">
+  
+    <link rel="alternate" href="/atom.xml" title="Chris Jopa" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Chris Jopa</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Web Development Blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://chrisjopa.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-learning-git" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/24/learning-git/" class="article-date">
+  <time datetime="2016-03-25T02:34:08.000Z" itemprop="datePublished">2016-03-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Learning Git
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Git is the standard Version Control System for software developers. Version control systems like Git enable developers to reliably collaborate with one another. Git also saves a snapshot of every version of your code, which comes in handy when you need to track down software bugs. Git is a complex piece of software. In this post I’m going to give a brief history of Git and explain how it works.</p>
+<a id="more"></a>
+<h2 id="History"><a href="#History" class="headerlink" title="History"></a>History</h2><p>GIT was developed in 2005 by Linus Torvalds of Linux so their development team can efficiently share files with each other. Torvalds is the man behind the Linux kernel which is a Unix-like operating system. Originally changes to the system were sent around using patches and archive files. After a decade, they began using BitKeeper which is a proprietary distributed revision control system. Eventually, BitKeeper revoked every free users’ license since a developer named Andrew Tridgell created a client which interoperated with BitKeeper which gave free users some features which only commercial users had. Torvalds did not want to go back to sharing files with patches so he created Git.</p>
+<p>Since coding is a collaborated effort and many things can go wrong in a project, version control systems are absolutely essential for a programmer. Before version control systems, programmers would share code through emails and floppy disks which makes it very tedious to track bugs and changes to the code. Version control systems help programmers keep track of code revisions. Also, they acknowledge that there is only one version of the project and all past versions and variants are saved within the system which can be accessed at any time. Every time a new version of a project is saved, you are required to provide a short description what was changed. Because of version control systems, coders have an easier time saving their changes and knowing what is actually different between each commit.</p>
+<h2 id="How-Git-Works"><a href="#How-Git-Works" class="headerlink" title="How Git Works"></a>How Git Works</h2><p>Git is a distributed version control system which keeps a central server storing the history of the files, and collaborators have their own local history as well. Team members have their version of different files which they can work on when they please. Everyone on the team can commit or merge all their changes into one common version. Git saves these versions or snapshots of the project so there will be no question where the most recent version of the project is located. </p>
+<p>The main difference between Git and other version control systems is how Git perceives its data. Other systems think of their information as a set of files and how each file changes over time. Git thinks of its data more like a set of “snapshots” of a repository. Every time you commit or save a state of your project, Git stores a picture of what your files looks like at that moment. If some files do not change between commits, Git does not store that file again but links it to the previous identical file. Git thinks about its information more like a “stream of snapshots”. This makes Git act like a mini filesystem with some powerful tools which makes it very useful.</p>
+<p>By using Git, different versions of a project between a team can saved and viewed efficiently.  A team member can modify a few different files in a project to fix bugs or for what ever reason. First, this team member made these changes locally to their own version of the file. Then they can tell Git to take a snapshot of their changes with the add command which stores their changes in the staging area. With the commit command, snapshots of the files are saved in your Git repository which can be pushed to the server. These changes can be shared throughout the team on their server while any team member can make changes to these files without erasing any other files. </p>
+<p>Git lets developer teams efficiently save, share, and modify different versions of their repository. For new developers it is essential to learn Git because it is the industry standard for softare engineering. </p>
+<h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ol>
+<li><a href="https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git" target="_blank" rel="external">Git History Article</a></li>
+<li><a href="https://www.git-tower.com/learn/git/ebook/command-line/basics/why-use-version-control" target="_blank" rel="external">Why Use Git Article</a></li>
+<li><a href="https://www.codeschool.com/courses/try-git" target="_blank" rel="external">Code School Git Free Course</a></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chrisjopa.com/2016/03/24/learning-git/" data-id="cim73k8sk0002o50zo4ta4pte" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/03/08/free-resources-for-new-web-developers/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Free Resources for New Web Developers</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/03/24/learning-git/">Learning Git</a>
+          </li>
+        
+          <li>
+            <a href="/2016/03/08/free-resources-for-new-web-developers/">Free Resources for New Web Developers</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Chris Jopa<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
